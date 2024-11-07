@@ -1,0 +1,33 @@
+# Object files
+*.o
+*.obj
+
+# Executable files
+*.exe
+*.out
+*.a
+*.so
+
+# Compiled Dynamic libraries
+*.dll
+*.dylib
+
+# Debug files
+*.log
+*.stackdump
+
+# Temporary files
+*.swp
+*~
+
+# Build directories
+/build/
+/bin/
+/lib/
+/dist/
+
+# Backup files
+*.bak
+*.old
+*.orig
+*.save
