@@ -31,3 +31,9 @@
 *.old
 *.orig
 *.save
+
+# Images
+*.jpg
+
+# Text files
+*.txt
