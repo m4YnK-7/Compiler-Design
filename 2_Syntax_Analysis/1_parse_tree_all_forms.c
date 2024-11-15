@@ -1,3 +1,18 @@
+/*
+    ============================================================================
+    File: 1_parse_tree_all_forms.c
+    Description:
+    Builds a parse tree from a given infix expression using a stack-based 
+    approach. Supports pre-order, in-order, and post-order traversals for 
+    evaluating and visualizing the structure of the expression.
+
+    Author: Mayank Singh
+    GitHub: https://github.com/m4YnK-7/Compiler-Design
+    Created on: November 16, 2024
+    Last Modified: November 16, 2024
+    ============================================================================
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -154,7 +169,7 @@ int main() {
 
     // Convert the infix expression to postfix
     infixToPostfix(infix, postfix);
-    printf("22BCE2387\nPostfix Expression: %s\n", postfix);
+    // printf("\nPostfix Expression: %s\n", postfix);
 
     // Build the syntax tree from postfix expression
     Node* root = buildTreeFromPostfix(postfix);
