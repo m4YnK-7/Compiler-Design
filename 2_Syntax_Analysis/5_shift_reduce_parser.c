@@ -1,6 +1,6 @@
 /*
     ============================================================================
-    File: 4_recursive_decent_parser.c
+    File: 5_shift_reduce_parser.c
     Description: Takes a string as input and parses it using shift reduce  
                  parser , wtih a defined grammer, i.e.
                  S -> AB
@@ -11,7 +11,7 @@
     Author: Mayank Singh
     GitHub: https://github.com/m4YnK-7/Compiler-Design
     Created on: November 16, 2024
-    Last Modified: November 16, 2024
+    Last Modified: November 17, 2024
     ============================================================================
 */
 
