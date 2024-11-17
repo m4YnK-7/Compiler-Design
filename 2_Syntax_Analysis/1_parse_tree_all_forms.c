@@ -9,7 +9,7 @@
     Author: Mayank Singh
     GitHub: https://github.com/m4YnK-7/Compiler-Design
     Created on: November 16, 2024
-    Last Modified: November 16, 2024
+    Last Modified: November 17, 2024
     ============================================================================
 */
 
@@ -41,9 +41,7 @@ Stack* push(Stack* top, char c) {
 
 Stack* pop(Stack* top) {
     if (top == NULL) return NULL;
-    Stack* temp = top;
     top = top->next;
-    free(temp);
     return top;
 }
 
@@ -111,28 +109,28 @@ int infixToPostfix(char* infix, char* postfix) {
 
 // Function to build the syntax tree from postfix expression
 Node* buildTreeFromPostfix(char* postfix) {
-    Node* stack[100];  // Stack of pointers to Node
-    int top = -1;
+    Node* tree[100];  // tree of pointers to Node
+    int root = -1;
 
     for (int i = 0; postfix[i] != '\0'; i++) {
         char c = postfix[i];
 
-        // If the character is an operand, push it to the stack
+        // If the character is an operand, push it to the tree
         if (isalnum(c)) {
             Node* newNode = createNode(c);
-            stack[++top] = newNode;
+            tree[++root] = newNode;
         }
         // If the character is an operator, pop two nodes, make them children, and push the new tree
         else if (isOperator(c)) {
             Node* newNode = createNode(c);
-            newNode->right = stack[top--];
-            newNode->left = stack[top--];
-            stack[++top] = newNode;
+            newNode->right = tree[root--];
+            newNode->left = tree[root--];
+            tree[++root] = newNode;
         }
     }
 
-    // The root of the tree is the last element remaining in the stack
-    return stack[top];
+    // The root of the tree is the last element remaining in the tree
+    return tree[root];
 }
 
 // Function to print the syntax tree in pre-order

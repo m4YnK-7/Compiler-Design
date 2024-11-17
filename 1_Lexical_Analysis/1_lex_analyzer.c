@@ -9,7 +9,7 @@
     Author: Mayank Singh
     GitHub: https://github.com/m4YnK-7/Compiler-Design
     Created on: November 13, 2024
-    Last Modified: November 13, 2024
+    Last Modified: November 17, 2024
     ============================================================================
 */
 
@@ -121,10 +121,6 @@ int main() {
     scanf("%s", filename); 
 
     FILE* file = fopen(filename, "r"); 
-    if (file == NULL) { 
-        printf("Error: Cannot open file %s\n", filename); 
-        return 1; 
-    } 
 
     char input[MAX_LENGTH]; 
     while (fgets(input, MAX_LENGTH, file) != NULL) { 

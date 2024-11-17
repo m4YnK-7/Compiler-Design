@@ -2,6 +2,8 @@
     ============================================================================
     File: 3_elim_left_recursion.c
     Description: Eliminates left recursion from a given grammar.
+                A -> Aa | b     to    A -> bA'
+                                      A' -> aA' | eps
 
     Author: Mayank Singh
     GitHub: https://github.com/m4YnK-7/Compiler-Design

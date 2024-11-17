@@ -37,3 +37,6 @@
 
 # Text files
 *.txt
+
+# TempCode Runner
+tempCodeRunnerFile.c
